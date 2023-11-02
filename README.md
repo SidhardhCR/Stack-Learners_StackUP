@@ -1,9 +1,10 @@
 ![StackUp Banner]([https://tinkerhub.frappe.cloud/files/stackup%20banner.jpeg])
-# Project Name
+# College Event Listing Platform
 Long Description about project. This project do that. This project is awesome...
 ## Team members
-1. Name [Embed personal github URL]
-2. Name [Embed perosnal github URL]
+1. Sidhardh C R [(https://github.com/SidhardhCR)]
+2. Matshon Beshy []
+3. Anjali Skaria [(https://github.com/anjaliskaria)]
 ## Team Id
 Team id here
 ## Link to product walkthrough
