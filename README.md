@@ -12,6 +12,7 @@ stack-learners
 ## How it Works ?
 1. Explaining the working of project
 2. Embed video of project demo
+3. ....
 ## Libraries used
 Library Name - Version
 ## How to configure
