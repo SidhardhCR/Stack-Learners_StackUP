@@ -1,5 +1,5 @@
 ![StackUp Banner]([https://tinkerhub.frappe.cloud/files/stackup%20banner.jpeg])
-# Project Name
+# College Event Listing Platform
 Long Description about project. This project do that. This project is awesome...
 ## Team members
 1. Name [Embed personal github URL]
