@@ -1,38 +1,76 @@
-import React from 'react'
+"use client";
+import React, { useState , useEffect} from 'react'
+import { UserAuth } from '../context/AuthContext'
+import Link from 'next/link';
 
-function Navbar() {
+
+const Navbar = () => {
+  const { user, googleSignIn, logOut } = UserAuth();
+  const [loading, setLoading] = useState(true);
+
+  const handleSignIn = async ()=>{
+    try{
+      await googleSignIn()
+    }catch(error){
+      console.log(error);
+      
+    }
+  }
+
+  const handlesignOut = async () =>{
+    try{
+      await logOut()
+    }catch(error){
+      console.log(error)
+    }
+  }
+  console.log(user)
+
+  useEffect(()=>{
+    const checkAuth = async ()=>{
+      await new Promise((resolve)=> setTimeout(resolve,50));
+      setLoading(false);
+    };
+    checkAuth();
+  },[user]);
+
   return (
-    <div>
+    <div >
         
         <div className="navbar bg-base-100">
   <div className="flex-1 ">
-    <a className="btn btn-ghost normal-case text-xl items-center" href="/"> <img width={200} src="/TinkerHub_ICET (3).png" /></a>
+    <a className="btn btn-ghost normal-case text-xl " href="/"> <img width={200} src="/TinkerHub_ICET (3).png" /></a>
   </div>
   <div className="flex-none gap-2">
   <ul className="menu menu-horizontal px-1">
-  <li><a>Home</a></li>
-  <li><a>Events</a></li>
-  <li><a>About</a></li>
-  <li><a>Contact Us</a></li>
+  <li><a href='/'>Home</a></li>
+  <li><a href=''>Events</a></li>
+ 
+  
     </ul>
-    <button className="btn btn-ghost btn-circle">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-    </button>
+    {loading? null :  !user?(<ul className='flex menu menu-horizontal '>
+    <li onClick={handleSignIn} className='p-2 cursor-pointer'>Login</li>
+  <li onClick={handleSignIn}className='p-2 cursor-pointer'>Sign Up</li>
+    </ul>):(
+        <div>
+          <p>{user.displayName}</p>
+        </div>
+    )}
+    
+   
     <div className="dropdown dropdown-end">
-      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img src="/a-4-1.jpg" />
+      <label tabIndex={0} className="btn btn-ghost btn-circle avatar online">
+        <div className="w-10 rounded-full ">
+          {!user?(<img src='/a-4-1.jpg'/>):(<img src={user.photoURL}alt="/a-4-1.jpg"/>)}
+          
         </div>
       </label>
       <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
         <li>
-          <a className="justify-between">
-            Profile
-            <span className="badge">New</span>
-          </a>
+          <Link href="/profile">profile</Link>
         </li>
         <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+        <li><a onClick={handlesignOut}>Logout</a></li>
       </ul>
     </div>
     
