@@ -52,8 +52,12 @@ const Navbar = () => {
     <li onClick={handleSignIn} className='p-2 cursor-pointer'>Login</li>
   <li onClick={handleSignIn}className='p-2 cursor-pointer'>Sign Up</li>
     </ul>):(
-        <div>
-          <p>{user.displayName}</p>
+        <div className='flex-none gap-2'>
+          <ul className='menu menu-horizontal'>
+          <li><a href='/addEvents'>Add Events</a></li>
+          <p className='p-2'>{user.displayName}</p>
+          
+          </ul>
         </div>
     )}
     
