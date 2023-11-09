@@ -37,13 +37,13 @@ const Navbar = () => {
   return (
     <div >
         
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-blue-700">
   <div className="flex-1 ">
     <a className="btn btn-ghost normal-case text-xl " href="/"> <img width={200} src="/TinkerHub_ICET (3).png" /></a>
   </div>
-  <div className="flex-none gap-2">
-  <ul className="menu menu-horizontal px-1">
-  <li><a href='/'>Home</a></li>
+  <div className="flex-none gap-2 ">
+  <ul className="menu menu-horizontal px-1 font-bold">
+  <li><a href='/' >Home</a></li>
   <li><a href=''>Events</a></li>
  
   
@@ -54,7 +54,7 @@ const Navbar = () => {
     </ul>):(
         <div className='flex-none gap-2'>
           <ul className='menu menu-horizontal'>
-          <li><a href='/addEvents'>Add Events</a></li>
+          <li><a href='/addEvents' className='font-bold'>Add Events</a></li>
           <p className='p-2'>{user.displayName}</p>
           
           </ul>
@@ -77,9 +77,19 @@ const Navbar = () => {
         <li><a onClick={handlesignOut}>Logout</a></li>
       </ul>
     </div>
+    <div className="sm:hidden">
+            {/* Add a mobile menu button (e.g., a responsive menu icon) */}
+            <p></p>
+            {/* Example: <button className="text-white">Menu</button> */}
+          </div>
     
   </div>
 </div>
+<div className="sm:hidden">
+            {/* Add a mobile menu button (e.g., a responsive menu icon) */}
+            <p></p>
+            {/* Example: <button className="text-white">Menu</button> */}
+          </div>
 <div>
   
 </div>

@@ -2,13 +2,15 @@ import React from 'react'
 
 function Card() {
   return (
-    <div><div className="card card-compact lg:w-80 h-80  bg-base-100 shadow-xl">
+    <div><div className="card card-compact lg:w-80 h-80  bg-white shadow-md rounded-lg' shadow-xl">
     <figure><img src="/bg.jpeg" alt="Shoes" /></figure>
-    <div className="card-body">
-      <h2 className="card-title">Shoes!</h2>
-      <p>If a dog chews shoes whose shoes does he choose?</p>
-      <div className="card-actions justify-end">
-        <button className="btn btn-primary">Buy Now</button>
+    <div className="card-body text-black">
+      <span className='text-slate-400'>Free</span>
+      <h2 className="card-title">Event Name</h2>
+      <p className='text-xs'>Date</p>
+      <p>Description</p>
+      <div className="card-actions justify-start">
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Buy Now</button>
       </div>
     </div>
   </div></div>
