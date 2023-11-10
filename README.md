@@ -1,9 +1,10 @@
 ![StackUp Banner]([https://tinkerhub.frappe.cloud/files/stackup%20banner.jpeg])
 # College Event Listing Platform
-Long Description about project. This project do that. This project is awesome...
+This is a Campus event listing website which list upcoming events.The campus event listing website serves as a centralized platform for showcasing upcoming events within a university or educational institution. Users have the convenience of creating an account and logging into the website, providing them with a personalized experience. A key feature of this platform is the ability for registered users to contribute to the event listings by adding details about their own upcoming events. This inclusive approach encourages active participation from various campus groups, clubs, and individuals, fostering a sense of community engagement. By allowing users to share information about their events, the website becomes a dynamic hub for discovering a diverse range of activities, from academic lectures and workshops to social gatherings and cultural events. This collaborative and user-driven approach not only enhances the richness of the event listings but also promotes a vibrant campus life by ensuring that a wide array of activities are showcased and easily accessible to the entire campus community.
 ## Team members
-1. Name [Embed personal github URL]
-2. Name [Embed perosnal github URL]
+1. [Sidhardh C R](https://github.com/SidhardhCR)
+2. [Anjali Skaria](https://github.com/anjaliskaria)
+3. [Mathson Beshy](https://github.com/mathson17)
 ## Team Id
 Team id here
 ## Link to product walkthrough
