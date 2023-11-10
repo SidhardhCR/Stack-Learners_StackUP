@@ -13,7 +13,7 @@ Stack-learners
 1. Explaining the working of project
 2. Embed video of project demo
 ## Libraries used
-Frontend -Next js. Version 14.0.2 React Version · 18.2.0 Daisy UI
+Frontend -Next js. Version 14.0.2 ,React Version · 18.2.0 Daisy UI
 Database -Firebase CLI (v12.7.0)
 Backend -Next js. Version 14.0.2
 
