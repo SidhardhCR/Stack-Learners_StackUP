@@ -3,7 +3,7 @@ import { db } from "./firebase";
 import { collection, getDocs } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
 
-async function fetchDataFromFireStore() {
+async function FetchDataFromFireStore() {
   const querySnapshot = await getDocs(collection(db, "messages"));
 
   const data: Array<any> = [];
@@ -23,7 +23,7 @@ export default function Home() {
 
   useEffect(() => {
     async function FetchData() {
-      const data = await fetchDataFromFireStore();
+      const data = await FetchDataFromFireStore();
       setEventData(data);
     }
     (async () => {
