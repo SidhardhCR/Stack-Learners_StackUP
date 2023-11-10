@@ -22,12 +22,12 @@ export default function Home() {
   const [eventData, setEventData] = useState<Array<any> | null>(null);
 
   useEffect(() => {
-    async function fetchData() {
+    async function FetchData() {
       const data = await fetchDataFromFireStore();
       setEventData(data);
     }
     (async () => {
-      await fetchData();
+      await FetchData();
     })();
   }, []);
   return (
