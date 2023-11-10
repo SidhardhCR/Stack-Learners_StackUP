@@ -3,7 +3,7 @@ import React , { useState , useEffect} from 'react'
 import { UserAuth } from '../context/AuthContext'
 
 
-function page() {
+function Page() {
 
     const { user }= UserAuth()
     const [loading, setLoading] = useState(true);
@@ -67,4 +67,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

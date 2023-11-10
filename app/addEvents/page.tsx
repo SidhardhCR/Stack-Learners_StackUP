@@ -21,7 +21,7 @@ async function addDataToFireStore(eventname:string,date:string,description:strin
     return false;
 }
 
-function page() {
+function Page() {
     const { user } = UserAuth();
     const [eventname,setEventname] = useState("");
     const [date,setDate] = useState("");
@@ -105,4 +105,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
