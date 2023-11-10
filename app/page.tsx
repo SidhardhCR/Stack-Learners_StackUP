@@ -40,7 +40,7 @@ export default function Home() {
           {eventData &&
             eventData.map((data) => {
               return <div key={data.id}><div className="card card-compact lg:w-80 h-80  bg-white shadow-md rounded-lg' shadow-xl">
-              <figure><img src="/bg.jpeg" alt="Shoes" /></figure>
+              <figure><img src="/card.jpg" alt="Shoes" /></figure>
               <div className="card-body text-black">
                 <span className='text-slate-400'>Free</span>
                 <h2 className="card-title">{data.eventname}</h2>
