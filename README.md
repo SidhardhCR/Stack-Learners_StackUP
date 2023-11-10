@@ -6,14 +6,17 @@ This is a Campus event listing website which list upcoming events.The campus eve
 2. [Anjali Skaria](https://github.com/anjaliskaria)
 3. [Mathson Beshy](https://github.com/mathson17)
 ## Team Id
-Team id here
+Stack-learners
 ## Link to product walkthrough
 [link to video]
 ## How it Works ?
 1. Explaining the working of project
 2. Embed video of project demo
 ## Libraries used
-Library Name - Version
+Frontend -Next js. Version 14.0.2 ,React Version · 18.2.0 Daisy UI
+Database -Firebase CLI (v12.7.0)
+Backend -Next js. Version 14.0.2
+
 ## How to configure
 Instructions for setting up project
 ## How to Run
