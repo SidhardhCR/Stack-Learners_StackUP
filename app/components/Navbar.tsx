@@ -74,12 +74,16 @@ const Navbar = () => {
      <ul className='sm:hidden'>
      <li><a href='/' >Home</a></li>
   <li><a href=''>Events</a></li>
+  <li><a href='/addEvents' className=''>Add Events</a></li>
      </ul>
         <li>
           <Link href="/profile">profile</Link>
         </li>
         <li><a>Settings</a></li>
+        {user?( <ul>
         <li><a onClick={handlesignOut}>Logout</a></li>
+        </ul>):( null)}
+       
       </ul>
       
     </div>
