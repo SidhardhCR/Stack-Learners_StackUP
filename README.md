@@ -12,21 +12,24 @@ Stack-learners
 ## Link to product walkthrough
 [link to video]
 ## How it Works ?
-1. Explaining the working of project
-2. Embed video of project demo
+1. The Website list the upcoming events.
+2. User can login in the website with google
+3. User can add their own events in the website.
+4. User can also search events on search bar.
 ## Libraries used
-Frontend -Next js. Version 14.0.2 ,React Version · 18.2.0 Daisy UI
-Database -Firebase CLI (v12.7.0)
-Backend -Next js. Version 14.0.2
+1. Frontend -Next js. Version 14.0.2 ,React Version · 18.2.0 Daisy UI,react-bootstrap version- 2.9.0-beta.1
+2. Database -Firebase CLI (v12.7.0)
+3. Backend -Next js. Version 14.0.2
+   
+
 
 ## How to configure
-Instructions for setting up project
+```bash
+git clone https://github.com/SidhardhCR/Stack-Learners_StackUP.git or fork 
+npm install 
+npm install firebase
+```
 ## How to Run
-
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
 
 First, run the development server:
 
