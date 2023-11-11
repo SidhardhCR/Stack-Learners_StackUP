@@ -25,7 +25,7 @@ Stack-learners
 
 ## How to configure
 ```bash
-git clone https://github.com/SidhardhCR/Stack-Learners_StackUP.git or fork 
+git clone https://github.com/SidhardhCR/Stack-Learners_StackUP.git 
 npm install 
 npm install firebase
 ```
