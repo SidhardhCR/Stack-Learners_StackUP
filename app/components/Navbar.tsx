@@ -74,7 +74,8 @@ const Navbar = () => {
      <ul className='sm:hidden'>
      <li><a href='/' >Home</a></li>
   <li><a href=''>Events</a></li>
-  <li><a href='/addEvents' className=''>Add Events</a></li>
+  {user?(<li><a href='/addEvents' className=''>Add Events</a></li>):(null)}
+  
      </ul>
         <li>
           <Link href="/profile">profile</Link>
