@@ -10,7 +10,7 @@ This is a Campus event listing website which list upcoming events.The campus eve
 ## Team Id
 Stack-learners
 ## Link to product walkthrough
-[link to video]
+[link to video](https://drive.google.com/drive/folders/1PUclIwaWCyx33kBdEWIEOmbbJMeTmOJM?usp=sharing)
 ## How it Works ?
 1. The Website list the upcoming events.
 2. User can login in the website with google
