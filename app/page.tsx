@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { db } from "./firebase";
 import { collection, getDocs } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
@@ -59,13 +60,16 @@ export default function Home() {
                 <p className='text-xs'>{data.date}</p>
                 <p>{data.description}</p>
                 <div className="card-actions justify-start">
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Register</button>
+                 <Link href={`${data.eventlink}`} > <button className="bg-stone-950 hover:bg-stone-800 text-white font-bold py-2 px-4 rounded-full" >Register</button></Link>
                 </div>
               </div>
             </div></div>
             })}
         </div>
       </div>
+      
     </main>
+  
+  
   );
 }

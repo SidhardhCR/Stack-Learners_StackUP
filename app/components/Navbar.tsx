@@ -38,9 +38,9 @@ const Navbar = () => {
   return (
     <div >
         
-        <div className="navbar bg-blue-700 fixed z-10 ease-in duration-300 flex justify-between m-auto p-2 w-full left-0 top-0">
+        <div className="navbar bg-stone-950 fixed z-10 ease-in duration-300 flex justify-between m-auto p-2 w-full left-0 top-0">
 
-    <a className=" normal-case text-xl " href="/"> <img width={180} height={500} src="/TinkerHub_ICET (3).png" /></a>
+    <a className=" normal-case text-xl " href="/"> <img className='ml-8' width={180} height={500} src="/icetWhite.png" /></a>
   
   <div className="">
   <ul className="hidden sm:flex menu menu-horizontal px-1 font-bold">
@@ -55,9 +55,14 @@ const Navbar = () => {
     </ul>):(
         <div className='flex-none gap-2'>
           <ul className='hidden sm:flex menu menu-horizontal'>
-          <li><a href='/addEvents' className='font-bold'>Add Events</a></li>
-          <p className='pt-2'>{user.displayName}</p>
           
+          
+          {user.displayName=='Sidhardh CR'?( 
+          <li><a href='/addEvents' className='font-bold'>Add Events</a></li>
+          
+          
+          ):(null)}
+          <li><p className='pt-2'>{user.displayName}</p></li>
           </ul>
         </div>
     )}
@@ -74,7 +79,8 @@ const Navbar = () => {
      <ul className='sm:hidden'>
      <li><a href='/' >Home</a></li>
   <li><a href=''>Events</a></li>
-  {user?(<li><a href='/addEvents' className=''>Add Events</a></li>):(null)}
+  {user&&user.displayName=='Sidhardh CR'?(
+  <li><a href='/addEvents' className=''>Add Events</a></li>):(null)}
   
      </ul>
         <li>

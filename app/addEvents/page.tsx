@@ -4,14 +4,16 @@ import { collection,addDoc } from 'firebase/firestore';
 
 import React,{useState,useEffect} from 'react'
 import { UserAuth } from '../context/AuthContext';
+import { Url } from 'next/dist/shared/lib/router/router';
 
-async function addDataToFireStore(eventname:string,date:string,description:string,nameusers:any) {
+async function addDataToFireStore(eventname:string,date:string,description:string,nameusers:any,eventlink:Url) {
     try{
         const docRef = await addDoc(collection(db,"messages"),{
             eventname:eventname,
             date:date,
             description:description,
-            nameusers:nameusers
+            nameusers:nameusers,
+            eventlink:eventlink
         });
         console.log("Data written with id : ",docRef.id)
         return true;
@@ -27,16 +29,18 @@ function Page() {
     const [date,setDate] = useState("");
     const [description,setDescription] = useState("");
     const [nameusers,setNameusers]=useState("");
+    const [eventlink,seteventlink]=useState("");
 
     const handleSubmit = async (e:any)=>{
         
         e.preventDefault();
-        const added = await addDataToFireStore(eventname,date,description,nameusers);
+        const added = await addDataToFireStore(eventname,date,description,nameusers,eventlink);
         if(added){
             setEventname("");
             setDate("");
             setDescription("");
             setNameusers("");
+            seteventlink("");
             alert("Event Submitted Successfully!!");
         }
     };
@@ -60,6 +64,18 @@ function Page() {
                 
                 />
       </div>
+      {/* <div className="form-control">
+  <label className="label cursor-pointer">
+    <span className="label-text">Free</span> 
+    <input type="checkbox"  className="checkbox checkbox-primary" />
+  </label>
+</div>
+<div className="form-control">
+  <label className="label cursor-pointer">
+    <span className="label-text">paid</span> 
+    <input type="checkbox"  className="checkbox checkbox-primary" />
+  </label>
+</div> */}
       
       <div className='mb-4'>
                 <label  htmlFor='date'  className='block text-gray-700 font-bold mb-2'>
@@ -86,6 +102,19 @@ function Page() {
                 className='w-full px-3 py-2 border text-black round-lg focus:outline-none focus:border-blue-700 bg-white'
                 
                 onChange={(e)=>setDescription(e.target.value)}
+                />
+      </div>
+      <div className='mb-4'>
+                <label  htmlFor='eventlink'  className='block text-gray-700 font-bold mb-2'>
+                    Event regiter Link:
+                </label>
+                <input 
+                
+                id="eventlink"
+                value={eventlink}
+                className='w-full px-3 py-2 border text-black round-lg focus:outline-none focus:border-blue-700 bg-white'
+                
+                onChange={(e)=>seteventlink(e.target.value)}
                 />
       </div>
       <div className='text-center'>
