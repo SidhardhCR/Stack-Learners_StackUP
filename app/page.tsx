@@ -49,7 +49,7 @@ export default function Home() {
     <main className=" bg-white ">
       
       <ScrollToTop color="black" smooth />
-      {/*<Carousel autoSlide={true} children={slides.map((s)=>(<img src={s}/>))}></Carousel>*/}
+      
       <Hero heading='Find Your Tech Events' message="An investment in knowledge pays the best interest. " />
       <div id="event" className="min-h-screen min-w-full  bg-neutral-100 container py-20 px-8 ">
         
