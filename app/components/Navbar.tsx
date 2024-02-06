@@ -6,6 +6,26 @@ import { AiOutlineMenu , AiOutlineClose} from "react-icons/ai";
 
 
 const Navbar = () => {
+  const [nav, setNav] = useState(false);
+  const [color, setColor] = useState('transparent');
+  const [textColor, setTextColor] = useState('white');
+
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
+  useEffect(() => {
+    const changeColor = () => {
+      if (window.scrollY >= 90) {
+        setColor('#000000');
+        setTextColor('#000000');
+      } else {
+        setColor('transparent');
+        setTextColor('#ffffff');
+      }
+    };
+    window.addEventListener('scroll', changeColor);
+  }, []);
   const { user, googleSignIn, logOut } = UserAuth();
   const [loading, setLoading] = useState(true);
 
@@ -38,14 +58,14 @@ const Navbar = () => {
   return (
     <div >
         
-        <div className="navbar bg-stone-950 fixed z-10 ease-in duration-300 flex justify-between m-auto p-2 w-full left-0 top-0">
+        <div style={{ backgroundColor: `${color}` }} className="navbar  fixed z-10 ease-in duration-300 flex justify-between m-auto p-2 w-screen left-0 top-0">
 
     <a className=" normal-case text-xl " href="/"> <img className='ml-8' width={180} height={500} src="/icetWhite.png" /></a>
   
   <div className="">
   <ul className="hidden sm:flex menu menu-horizontal px-1 font-bold">
-  <li><a href='/' >Home</a></li>
-  <li><a href='/'>Events</a></li>
+  <li><a href='#home' >Home</a></li>
+  <li><a href='#event'>Events</a></li>
  
   
     </ul>
@@ -57,7 +77,7 @@ const Navbar = () => {
           <ul className='hidden sm:flex menu menu-horizontal'>
           
           
-          {user.displayName=='Sidhardh CR'?( 
+          {(user.displayName=='Sidhardh CR'||user.displayName=='TinkerHub ICET')?( 
           <li><a href='/addEvents' className='font-bold'>Add Events</a></li>
           
           
@@ -68,7 +88,7 @@ const Navbar = () => {
     )}
     
    
-    <div className="dropdown dropdown-end">
+    <div className="dropdown dropdown-end pr-4">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar online">
         <div className="w-10 rounded-full ">
           {!user?(<img src='/avatar.jpg'/>):(<img src={user.photoURL}alt="/a-4-1.jpg"/>)}
@@ -79,7 +99,7 @@ const Navbar = () => {
      <ul className='sm:hidden'>
      <li><a href='/' >Home</a></li>
   <li><a href=''>Events</a></li>
-  {user&&user.displayName=='Sidhardh CR'?(
+  {user&&(user.displayName=='Sidhardh CR'||user.displayName=='TinkerHub ICET')?(
   <li><a href='/addEvents' className=''>Add Events</a></li>):(null)}
   
      </ul>

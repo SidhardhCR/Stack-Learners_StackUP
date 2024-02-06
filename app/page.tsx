@@ -6,6 +6,10 @@ import React, { useState, useEffect } from "react";
 import { Form } from "react-bootstrap";
 import InputGroupText from "react-bootstrap/esm/InputGroupText";
 
+import Hero from "./components/Hero";
+import ScrollToTop from "react-scroll-to-top";
+
+
 async function FetchDataFromFireStore() {
   const querySnapshot = await getDocs(collection(db, "messages"));
 
@@ -34,10 +38,21 @@ export default function Home() {
       await FetchData();
     })();
   }, []);
+
+  const slides =[
+    " https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80",
+   " https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80",
+   "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+ ]
   return (
-    <main className=" bg-white ">
     
-      <div className="min-h-screen min-w-full  bg-neutral-100 container py-20 px-8 ">
+    <main className=" bg-white ">
+      
+      <ScrollToTop color="black" smooth />
+      {/*<Carousel autoSlide={true} children={slides.map((s)=>(<img src={s}/>))}></Carousel>*/}
+      <Hero heading='Find Your Tech Events' message="An investment in knowledge pays the best interest. " />
+      <div id="event" className="min-h-screen min-w-full  bg-neutral-100 container py-20 px-8 ">
+        
      
         <h1 className="text-5xl font-bold text-center text-black pb-10">
           Events
@@ -69,6 +84,7 @@ export default function Home() {
       </div>
       
     </main>
+  
   
   
   );
