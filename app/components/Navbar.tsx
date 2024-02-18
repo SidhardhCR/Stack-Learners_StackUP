@@ -64,8 +64,8 @@ const Navbar = () => {
   
   <div className="">
   <ul className="hidden sm:flex menu menu-horizontal px-1 font-bold">
-  <li><a href='#home' >Home</a></li>
-  <li><a href='#event'>Events</a></li>
+  <li><a href='/' >Home</a></li>
+  <li><a href='/#event'>Events</a></li>
  
   
     </ul>
@@ -82,7 +82,7 @@ const Navbar = () => {
           
           
           ):(null)}
-          <li><p className='pt-2'>{user.displayName}</p></li>
+          <li><a href='/profile' className='pt-2'>{user.displayName}</a></li>
           </ul>
         </div>
     )}
@@ -98,7 +98,7 @@ const Navbar = () => {
       <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
      <ul className='sm:hidden'>
      <li><a href='/' >Home</a></li>
-  <li><a href=''>Events</a></li>
+  <li><a href='/#event'>Events</a></li>
   {user&&(user.displayName=='Sidhardh CR'||user.displayName=='TinkerHub ICET')?(
   <li><a href='/addEvents' className=''>Add Events</a></li>):(null)}
   

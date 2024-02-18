@@ -17,8 +17,9 @@ function Page() {
       },[user]);
   return (
     
-    <div className='bg-white h-screen text-black'>
-        {loading?(<p>Loading...</p>):user?(<div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-start sm:py-12">
+    <div className='bg-gradient-to-t from-black via-purple-950 to-black h-screen text-black'>
+      <div className='bg-black fixed ease-in duration-300 flex justify-between m-auto p-2 w-screen left-0 top-0 h-14'></div>
+        {loading?(<p>Loading...</p>):user?(<div className="min-h-screen flex flex-col justify-center sm:py-12">
       <div className="relative py-3 sm:max-w-xl sm:mx-auto">
         <div className="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
           <div className="max-w-md mx-auto">

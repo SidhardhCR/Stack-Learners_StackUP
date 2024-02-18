@@ -46,15 +46,15 @@ export default function Home() {
  ]
   return (
     
-    <main className=" bg-white ">
+    <main className=" bg-white bg-gradient-to-t from-black via-purple-950 to-black ">
       
       <ScrollToTop color="black" smooth />
       
       <Hero heading='Find Your Tech Events' message="An investment in knowledge pays the best interest. " />
-      <div id="event" className="min-h-screen min-w-full  bg-neutral-100 container py-20 px-8 ">
+      <div id="event" className="min-h-screen min-w-full   container py-20 px-8 ">
         
      
-        <h1 className="text-5xl font-bold text-center text-black pb-10">
+        <h1 className="text-5xl font-bold text-center text-white pb-10">
           Events
         </h1>
         <div className="pb-7 flex justify-center w-full">

@@ -46,8 +46,9 @@ function Page() {
     };
 
   return (
-    <main className='flex min-h-screen flex-col items-center p-24 bg-neutral-100'>
-        <h1 className='text-black font-bold text-5xl m-10'>Form</h1>
+    <main className='flex min-h-screen flex-col items-center p-24 bg-gradient-to-t from-black via-purple-950 to-black'>
+        <div className='bg-black fixed ease-in duration-300 flex justify-between m-auto p-2 w-screen left-0 top-0 h-14'></div>
+        <h1 className='text-white font-bold text-5xl m-10'>Form</h1>
 
         
         <form onSubmit={handleSubmit} className='max-w-md mx-auto p-4 bg-white shadow-md rounded-lg' >
